@@ -51,3 +51,8 @@ const SignIn = () => {
 };
 
 export default SignIn;
+// import { Client, Account, ID } from 'react-native-appwrite';
+
+// const client = new Client()
+//     .setProject('6782c23b003189ab736c')
+//     .setPlatform('com.tolax.waitingvaya');
