@@ -11,9 +11,10 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const SignIn = () => {
-  const handleLogin = () => {
+  const handleLogin = async () => {
     console.log("Login with Google");
   };
+
   return (
     <SafeAreaView className="bg-white h-full">
       <ScrollView contentContainerClassName="h-full p-2">
@@ -39,7 +40,10 @@ const SignIn = () => {
 
             <TouchableOpacity className="gap-2 flex flex-row items-center px-8 py-3 border  shadow-lg bg-white  rounded-full">
               <Image source={icons.google} className="w-6 h-6" />
-              <Text onPress={handleLogin} className="text-center font-medium text-lg ">
+              <Text
+                onPress={handleLogin}
+                className="text-center font-medium text-lg "
+              >
                 Sign In with Google
               </Text>
             </TouchableOpacity>
@@ -51,8 +55,3 @@ const SignIn = () => {
 };
 
 export default SignIn;
-// import { Client, Account, ID } from 'react-native-appwrite';
-
-// const client = new Client()
-//     .setProject('6782c23b003189ab736c')
-//     .setPlatform('com.tolax.waitingvaya');

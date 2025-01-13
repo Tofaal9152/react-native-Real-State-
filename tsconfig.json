@@ -3,10 +3,17 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
+      "components/*": [
+        "*"
+      ],
+      "lib/*": [
+        "*"
+      ],
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "baseUrl": "."
   },
   "include": [
     "**/*.ts",
