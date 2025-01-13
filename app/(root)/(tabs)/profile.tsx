@@ -9,6 +9,7 @@ import {
 import React from "react";
 import icons from "@/constants/icons";
 import images from "@/constants/images";
+import { Link } from "expo-router";
 
 // Dummy Data
 const dummyData = [
@@ -61,7 +62,13 @@ const Profile = () => {
           ))}
         </View>
         {/* Logout Button */}
-        <View className="border-t border-gray-100 mt-4">
+        <Link href={"/SignIn"} asChild className="border-t border-gray-100 mt-4">
+          <TouchableOpacity className="flex items-center justify-between p-4 flex-row">
+            <Text className="font-medium text-lg">Sign In</Text>
+            <Image className="size-7" source={icons.google} />
+          </TouchableOpacity>
+        </Link>
+        <View className=" border-gray-100">
           <TouchableOpacity className="flex items-center justify-between p-4 flex-row">
             <Text className="font-medium text-lg">Logout</Text>
             <Image className="size-7" source={icons.logout} />

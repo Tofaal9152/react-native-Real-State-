@@ -1,5 +1,7 @@
 import icons from "@/constants/icons";
 import images from "@/constants/images";
+import { useRouter } from "expo-router";
+
 import React from "react";
 import {
   Image,
@@ -11,9 +13,8 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const SignIn = () => {
-  const handleLogin = async () => {
-    console.log("Login with Google");
-  };
+  const router = useRouter();
+  
 
   return (
     <SafeAreaView className="bg-white h-full">
@@ -41,7 +42,7 @@ const SignIn = () => {
             <TouchableOpacity className="gap-2 flex flex-row items-center px-8 py-3 border  shadow-lg bg-white  rounded-full">
               <Image source={icons.google} className="w-6 h-6" />
               <Text
-                onPress={handleLogin}
+                onPress={()=>router.push("/")}
                 className="text-center font-medium text-lg "
               >
                 Sign In with Google
